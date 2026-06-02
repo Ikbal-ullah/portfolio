@@ -72,6 +72,7 @@
           aria-expanded="false"
           aria-controls="mobile-menu"
           aria-label="Open menu"
+          data-mobile-menu-button
         >
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -218,6 +219,20 @@
             </li>
 
             <li class="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 transition hover:border-slate-600">
+              <div class="aspect-video bg-gradient-to-br from-cyan-600/20 to-slate-800" aria-hidden="true"></div>
+              <article class="flex flex-1 flex-col p-6">
+                <h3 class="text-lg font-semibold text-white">JEV Bio-Hydrological Predictive Radar</h3>
+                <p class="mt-2 flex-1 text-sm text-slate-400">
+                  Early-warning pipeline for Japanese Encephalitis risk: satellite + weather ingestion, mass-balance hydrology features, thermal vector-growth constraints, and cohort time-lags for predictive signal weeks ahead.
+                </p>
+                <div class="mt-4 flex gap-3 text-sm font-medium">
+                  <span class="text-sm text-slate-500">Ongoing</span>
+                  <a href="https://github.com/Ikbal-ullah/JE-Early-Warning-System" class="text-slate-400 hover:text-white" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 transition hover:border-slate-600">
               <div class="aspect-video bg-gradient-to-br from-emerald-600/20 to-slate-800" aria-hidden="true"></div>
               <article class="flex flex-1 flex-col p-6">
                 <h3 class="text-lg font-semibold text-white">ML Algorithmic Trading & Backtesting Engine</h3>
@@ -225,8 +240,8 @@
                   Built an end-to-end quantitative backtesting engine that eliminates look-ahead bias using strict time-series splits to accurately validate machine learning strategies on market momentum.
                 </p>
                 <div class="mt-4 flex gap-3 text-sm font-medium">
-                  <a href="https://ml-trading-predictor-3t3tezcf82fxrxwzwmjwua.streamlit.app/" class="text-indigo-400 hover:text-indigo-300">Live demo</a>
-                  <a href="https://github.com/Ikbal-ullah/ML-Trading-Predictor" class="text-slate-400 hover:text-white">Source</a>
+                  <a href="https://ml-trading-predictor-3t3tezcf82fxrxwzwmjwua.streamlit.app/" class="text-indigo-400 hover:text-indigo-300" target="_blank" rel="noopener noreferrer">Live demo</a>
+                  <a href="https://github.com/Ikbal-ullah/ML-Trading-Predictor" class="text-slate-400 hover:text-white" target="_blank" rel="noopener noreferrer">Source</a>
                 </div>
               </article>
             </li>
@@ -239,8 +254,8 @@
                   Engineered an automated ETL and clustering pipeline that decodes raw Codeforces submission data to pinpoint and bridge granular algorithmic skill gaps beyond surface-level ratings.
                 </p>
                 <div class="mt-4 flex gap-3 text-sm font-medium">
-                  <a href="https://algomentorai-6txpp8nsuueiljnx9kdkpr.streamlit.app/" class="text-indigo-400 hover:text-indigo-300">Live demo</a>
-                  <a href="https://github.com/Ikbal-ullah/AlgoMentorAI" class="text-slate-400 hover:text-white">Source</a>
+                  <a href="https://algomentorai-6txpp8nsuueiljnx9kdkpr.streamlit.app/" class="text-indigo-400 hover:text-indigo-300" target="_blank" rel="noopener noreferrer">Live demo</a>
+                  <a href="https://github.com/Ikbal-ullah/AlgoMentorAI" class="text-slate-400 hover:text-white" target="_blank" rel="noopener noreferrer">Source</a>
                 </div>
               </article>
             </li>
@@ -260,7 +275,7 @@
             </p>
           </div>
 
-          <form class="mx-auto mt-10 max-w-lg space-y-4" action="#" method="post">
+          <form class="mx-auto mt-10 max-w-lg space-y-4" action="#" method="post" data-contact-form>
             <div>
               <label for="name" class="block text-sm font-medium text-slate-300">Name</label>
               <input
@@ -324,6 +339,32 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const mobileMenuButton = document.querySelector("[data-mobile-menu-button]");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          const isOpen = mobileMenuButton.getAttribute("aria-expanded") === "true";
+          mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+          mobileMenu.classList.toggle("hidden", isOpen === false);
+        });
+      }
+
+      const contactForm = document.querySelector("[data-contact-form]");
+      if (contactForm instanceof HTMLFormElement) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const data = new FormData(contactForm);
+          const name = String(data.get("name") ?? "").trim();
+          const email = String(data.get("email") ?? "").trim();
+          const message = String(data.get("message") ?? "").trim();
+
+          const subject = encodeURIComponent(`Portfolio inquiry from ${name || "someone"}`);
+          const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+          window.location.href = `mailto:ikbalullah305@gmail.com?subject=${subject}&body=${body}`;
+        });
+      }
     </script>
   </body>
 </html>
