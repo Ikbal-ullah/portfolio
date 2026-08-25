@@ -262,6 +262,7 @@
         <ul class="hidden items-center gap-1 text-sm font-medium md:flex" id="navlinks">
           <li><a data-nav href="#about" class="rounded-lg px-3 py-2 text-slate-400 transition hover:text-white">About</a></li>
           <li><a data-nav href="#work" class="rounded-lg px-3 py-2 text-slate-400 transition hover:text-white">Work</a></li>
+          <li><a data-nav href="#cp" class="rounded-lg px-3 py-2 text-slate-400 transition hover:text-white">CP</a></li>
           <li><a data-nav href="#stack" class="rounded-lg px-3 py-2 text-slate-400 transition hover:text-white">Stack</a></li>
           <li><a data-nav href="#journey" class="rounded-lg px-3 py-2 text-slate-400 transition hover:text-white">Journey</a></li>
           <li><a data-nav href="#contact" class="rounded-lg px-3 py-2 text-slate-400 transition hover:text-white">Contact</a></li>
@@ -309,6 +310,7 @@
         <ul class="space-y-1 px-5 py-4 text-sm font-medium text-slate-300">
           <li><a href="#about" class="block rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">About</a></li>
           <li><a href="#work" class="block rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Work</a></li>
+          <li><a href="#cp" class="block rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Competitive programming</a></li>
           <li><a href="#stack" class="block rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Stack</a></li>
           <li><a href="#journey" class="block rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Journey</a></li>
           <li><a href="#contact" class="block rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Contact</a></li>
@@ -343,7 +345,7 @@
               </h1>
 
               <p class="mt-7 max-w-xl text-lg leading-relaxed text-slate-400">
-                Third-year Electrical Engineering at <strong class="font-semibold text-slate-200">NIT Silchar</strong>,
+                Final-year Electrical Engineering at <strong class="font-semibold text-slate-200">NIT Silchar</strong>,
                 focused on <strong class="font-semibold text-slate-200">software development and AI/ML</strong>.
                 I design, build, and ship the whole thing — data pipeline, model, and the application a
                 person actually opens.
@@ -379,13 +381,13 @@
                 <div>
                   <dt class="eyebrow">Built</dt>
                   <dd class="mt-1.5 font-display text-sm font-semibold text-white">
-                    <span data-count="11">11</span> projects
+                    <span data-count="8">8</span> projects
                   </dd>
                 </div>
                 <div>
-                  <dt class="eyebrow">Live apps</dt>
+                  <dt class="eyebrow">Codeforces</dt>
                   <dd class="mt-1.5 font-display text-sm font-semibold text-white">
-                    <span data-count="2">2</span> deployed
+                    <a href="https://codeforces.com/profile/trying212" target="_blank" rel="noopener noreferrer" class="transition hover:text-mint">trying212 ↗</a>
                   </dd>
                 </div>
                 <div>
@@ -593,7 +595,7 @@
                 id="work-heading"
                 class="mt-3 max-w-2xl font-display text-3xl font-bold tracking-tight text-white sm:text-4xl"
               >
-                Eleven things I built, and what each one taught me.
+                Eight things I built, and what each one taught me.
               </h2>
             </div>
             <p class="max-w-xs text-sm leading-relaxed text-slate-500">
@@ -725,13 +727,174 @@
               class="filter-btn rounded-lg border border-line px-4 py-2 font-mono text-xs text-slate-400 transition hover:border-slate-600 hover:text-slate-200">Backend</button>
             <button type="button" data-filter="quant" aria-pressed="false"
               class="filter-btn rounded-lg border border-line px-4 py-2 font-mono text-xs text-slate-400 transition hover:border-slate-600 hover:text-slate-200">Quant</button>
-            <button type="button" data-filter="web3" aria-pressed="false"
-              class="filter-btn rounded-lg border border-line px-4 py-2 font-mono text-xs text-slate-400 transition hover:border-slate-600 hover:text-slate-200">Web3</button>
             <p class="ml-auto font-mono text-xs text-slate-600" id="filter-count" aria-live="polite"></p>
           </div>
 
           <!-- ---------- PROJECT GRID ---------- -->
           <ul class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" role="list" id="project-grid">
+            <!-- Beacon (system design) -->
+            <li class="reveal" data-tags="backend systems">
+              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
+                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
+                  <p class="eyebrow">Measured latency · k6</p>
+                  <svg class="art art-bc h-[7.5rem]" viewBox="0 0 400 160" role="img" aria-label="Bar chart of measured p50, p95 and p99 latency with the access log on versus off, showing the access log costs roughly two to five milliseconds at the tail">
+                    <g transform="translate(12,14)"><rect x="0" y="0" width="9" height="9" rx="2" class="b-on"/><text x="13" y="8" class="b-leg">access log on</text><rect x="0" y="16" width="9" height="9" rx="2" class="b-off"/><text x="13" y="24" class="b-leg">off</text></g>
+<rect x="96" y="107.9" width="26" height="10.1" rx="3" class="b-on"/>
+<rect x="134" y="110.4" width="26" height="7.6" rx="3" class="b-off"/>
+<text x="128.0" y="134" class="b-lab" text-anchor="middle">p50</text>
+<text x="109.0" y="102.9" class="b-v" text-anchor="middle">1.71</text>
+<text x="147.0" y="105.4" class="b-v2" text-anchor="middle">1.29</text>
+<rect x="196" y="71.6" width="26" height="46.4" rx="3" class="b-on"/>
+<rect x="234" y="84.3" width="26" height="33.7" rx="3" class="b-off"/>
+<text x="228.0" y="134" class="b-lab" text-anchor="middle">p95</text>
+<text x="209.0" y="66.6" class="b-v" text-anchor="middle">7.83</text>
+<text x="247.0" y="79.3" class="b-v2" text-anchor="middle">5.70</text>
+<rect x="296" y="38.0" width="26" height="80.0" rx="3" class="b-on"/>
+<rect x="334" y="65.4" width="26" height="52.6" rx="3" class="b-off"/>
+<text x="328.0" y="134" class="b-lab" text-anchor="middle">p99</text>
+<text x="309.0" y="33.0" class="b-v" text-anchor="middle">13.52</text>
+<text x="347.0" y="60.4" class="b-v2" text-anchor="middle">8.89</text>
+<line x1="86" y1="118" x2="384" y2="118" class="b-ax"/>
+<text x="12" y="60" class="b-leg">latency</text><text x="12" y="72" class="b-leg">(ms)</text>
+<text x="86" y="152" class="b-leg">75,358 req/s peak &#183; 0% errors &#183; 200 VUs</text>
+                  </svg>
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex items-start justify-between gap-3">
+                    <h3 class="font-display text-lg font-semibold text-white">Beacon</h3>
+                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Go</span>
+                  </div>
+                  <p class="mt-1 font-mono text-xs text-mint">Production-shaped HTTP service</p>
+                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
+                    A system-design exercise taken seriously: typed env config that fails fast and reports
+                    every error at once, structured JSON logs correlated by request ID, split liveness and
+                    readiness probes, and a SIGTERM drain that flips readiness before closing the listener
+                    so the load balancer stops sending work first. Every claim is backed by a k6 run
+                    recorded in a measurements log.
+                  </p>
+                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">stdlib only</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Graceful drain</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Observability</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">k6 · Docker</li>
+                  </ul>
+                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
+                    <span class="font-mono text-xs text-slate-600">Local build · publishing soon</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Redis-Lite / kvstore -->
+            <li class="reveal" data-tags="systems backend">
+              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
+                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
+                  <p class="eyebrow">Write path · durability</p>
+                  <svg class="art h-[7.5rem]" viewBox="0 0 400 150" role="img" aria-label="Clients over TCP reach poll-based event loops, which read and write a hash map guarded by a shared mutex and append every mutation to a write-ahead log on disk">
+                    <g class="rl-box" fill="none" stroke="#5eead4" stroke-opacity="0.3">
+                      <rect x="12" y="52" width="66" height="34" rx="7"/>
+                      <rect x="110" y="52" width="82" height="34" rx="7"/>
+                      <rect x="224" y="18" width="76" height="34" rx="7"/>
+                      <rect x="224" y="88" width="76" height="34" rx="7"/>
+                      <rect x="332" y="88" width="56" height="34" rx="7"/>
+                    </g>
+                    <g stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.4" fill="none" stroke-linecap="round">
+                      <path d="M78 69h28"/><path d="M192 69h10l12-30h8"/><path d="M192 69h10l12 34h8"/><path d="M300 105h28"/>
+                    </g>
+                    <g fill="#5eead4" fill-opacity="0.6">
+                      <path d="M102 65l6 4-6 4z"/><path d="M220 35l6 4-6 4z"/><path d="M220 99l6 4-6 4z"/><path d="M326 101l6 4-6 4z"/>
+                    </g>
+                    <g font-family="ui-monospace,monospace" font-size="9" fill="#94a3b8" text-anchor="middle">
+                      <text x="45" y="66">clients</text><text x="45" y="78" fill="#475569">TCP</text>
+                      <text x="151" y="66">event loops</text><text x="151" y="78" fill="#475569">poll · N thr</text>
+                      <text x="262" y="32">hash map</text><text x="262" y="44" fill="#475569">shared_mutex</text>
+                      <text x="262" y="102">WAL</text><text x="262" y="114" fill="#475569">append only</text>
+                      <text x="360" y="102">disk</text><text x="360" y="114" fill="#475569">fsync</text>
+                    </g>
+                    <text x="12" y="140" font-family="ui-monospace,monospace" font-size="9" fill="#475569">27 tests · crash-recovery replay verified</text>
+                  </svg>
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex items-start justify-between gap-3">
+                    <h3 class="font-display text-lg font-semibold text-white">Redis-Lite</h3>
+                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">C++20</span>
+                  </div>
+                  <p class="mt-1 font-mono text-xs text-mint">Durable key-value store</p>
+                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
+                    A non-blocking TCP server speaking a subset of RESP, backed by a hash map under a
+                    readers-writer lock and an append-only write-ahead log. Zero third-party
+                    dependencies — the event loop, the protocol framing, and the durability path are all
+                    hand-written. Ships with a CLI, a Python SDK, a benchmark suite, and a container image.
+                  </p>
+                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Event loop</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">WAL · fsync</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">RESP</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Docker</li>
+                  </ul>
+                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
+                    <span class="font-mono text-xs text-slate-600">Local build · publishing soon</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Mini-OS -->
+            <li class="reveal" data-tags="systems">
+              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
+                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
+                  <p class="eyebrow">Round-robin trace</p>
+                  <svg class="art art-os h-[7.5rem]" viewBox="0 0 400 150" role="img" aria-label="Gantt chart of three processes preempted in round-robin order, with context switches marked on the timeline and one process blocked on input output">
+                    <line x1="44" y1="39" x2="380" y2="39" class="os-rail"/>
+<text x="14" y="43" class="os-lab">P1</text>
+<line x1="44" y1="67" x2="380" y2="67" class="os-rail"/>
+<text x="14" y="71" class="os-lab">P2</text>
+<line x1="44" y1="95" x2="380" y2="95" class="os-rail"/>
+<text x="14" y="99" class="os-lab">P3</text>
+<rect x="44.0" y="30" width="42.0" height="18" rx="3" class="os-p1"/>
+<rect x="89.0" y="58" width="42.0" height="18" rx="3" class="os-p2"/>
+<rect x="134.0" y="86" width="42.0" height="18" rx="3" class="os-p3"/>
+<rect x="179.0" y="30" width="42.0" height="18" rx="3" class="os-p1"/>
+<rect x="224.0" y="58" width="27.0" height="18" rx="3" class="os-p2"/>
+<rect x="254.0" y="58" width="27.0" height="18" rx="3" class="os-blk"/>
+<rect x="284.0" y="86" width="42.0" height="18" rx="3" class="os-p3"/>
+<rect x="329.0" y="30" width="27.0" height="18" rx="3" class="os-p1"/>
+<path d="M89.0 112 l-3.5 6 h7 z" class="os-sw"/>
+<path d="M134.0 112 l-3.5 6 h7 z" class="os-sw"/>
+<path d="M179.0 112 l-3.5 6 h7 z" class="os-sw"/>
+<path d="M224.0 112 l-3.5 6 h7 z" class="os-sw"/>
+<path d="M284.0 112 l-3.5 6 h7 z" class="os-sw"/>
+<path d="M329.0 112 l-3.5 6 h7 z" class="os-sw"/>
+<line x1="44" y1="112" x2="380" y2="112" class="os-ax"/>
+<g transform="translate(44,130)"><path d="M4 0 l-3.5 6 h7 z" class="os-sw"/><text x="13" y="6" class="os-leg">context switch</text><rect x="96" y="0" width="8" height="7" rx="2" class="os-blk"/><text x="109" y="6" class="os-leg">blocked on I/O</text><text x="196" y="6" class="os-leg">quantum = 3 instr</text></g>
+                  </svg>
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex items-start justify-between gap-3">
+                    <h3 class="font-display text-lg font-semibold text-white">Mini-OS</h3>
+                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">C++20</span>
+                  </div>
+                  <p class="mt-1 font-mono text-xs text-mint">Simulated operating system</p>
+                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
+                    A kernel that owns a scheduler, a memory manager, a process table, and a resource
+                    manager, running processes through their full lifecycle — preemption, register
+                    save and restore, page faults, syscalls, blocking and waking. Swapping Round Robin for
+                    FCFS changes one <span class="font-mono">unique_ptr</span> and nothing else. It also
+                    reproduces a real race condition, then catches a deadlock by finding the cycle in its
+                    own wait-for graph.
+                  </p>
+                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Scheduling</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Virtual memory</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Deadlock detection</li>
+                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">RAII ownership</li>
+                  </ul>
+                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
+                    <span class="font-mono text-xs text-slate-600">Local build · publishing soon</span>
+                  </div>
+                </div>
+              </article>
+            </li>
 
             <!-- MatVM -->
             <li class="reveal" data-tags="systems">
@@ -946,221 +1109,6 @@
               </article>
             </li>
 
-            <!-- Blockchain Document Registry -->
-            <li class="reveal" data-tags="web3">
-              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
-                  <p class="eyebrow">Commit chain · hash only</p>
-                  <svg class="art h-[7.5rem]" viewBox="0 0 400 150" role="img" aria-label="Four linked blocks each storing a document hash, chained by parent hash references">
-                    <g fill="none" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.5">
-                      <path d="M96 62h22M180 62h22M264 62h22" stroke-linecap="round"/>
-                      <path d="M112 58l7 4-7 4M196 58l7 4-7 4M280 58l7 4-7 4" stroke-linejoin="round"/>
-                    </g>
-                    <g>
-                      <rect x="26" y="34" width="70" height="56" rx="9" fill="#5eead4" fill-opacity="0.07" stroke="#5eead4" stroke-opacity="0.35"/>
-                      <rect x="110" y="34" width="70" height="56" rx="9" fill="#5eead4" fill-opacity="0.07" stroke="#5eead4" stroke-opacity="0.35"/>
-                      <rect x="194" y="34" width="70" height="56" rx="9" fill="#5eead4" fill-opacity="0.07" stroke="#5eead4" stroke-opacity="0.35"/>
-                      <rect x="278" y="34" width="70" height="56" rx="9" fill="#8b93ff" fill-opacity="0.12" stroke="#8b93ff" stroke-opacity="0.5"/>
-                    </g>
-                    <g font-family="ui-monospace,monospace" font-size="9" fill="#64748b">
-                      <text x="38" y="56">0x9f2a</text><text x="122" y="56">0x4c71</text>
-                      <text x="206" y="56">0xb3d8</text><text x="290" y="56" fill="#8b93ff">0x1e6f</text>
-                      <text x="38" y="76" fill="#475569">n−3</text><text x="122" y="76" fill="#475569">n−2</text>
-                      <text x="206" y="76" fill="#475569">n−1</text><text x="290" y="76" fill="#475569">head</text>
-                    </g>
-                    <g font-family="ui-monospace,monospace" font-size="9" fill="#475569">
-                      <text x="26" y="118">document contents never leave the client</text>
-                    </g>
-                  </svg>
-                </div>
-                <div class="flex flex-1 flex-col p-6">
-                  <div class="flex items-start justify-between gap-3">
-                    <h3 class="font-display text-lg font-semibold text-white">Document Registry</h3>
-                    <span class="shrink-0 rounded-md border border-sand/30 bg-sand/10 px-2 py-0.5 font-mono text-[0.65rem] text-sand">WIP</span>
-                  </div>
-                  <p class="mt-1 font-mono text-xs text-mint">Blockchain provenance</p>
-                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
-                    A privacy-preserving verification platform. Only the cryptographic digest is anchored
-                    on-chain, so a document's existence and integrity become provable at a timestamp
-                    without ever exposing what the document says.
-                  </p>
-                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Solidity</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Hashing</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Web3</li>
-                  </ul>
-                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
-                    <a href="https://github.com/Ikbal-ullah/blockchain-document-registry" target="_blank" rel="noopener noreferrer"
-                       class="text-slate-400 transition hover:text-white">Source <span aria-hidden="true">↗</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-
-            <!-- Redis-Lite / kvstore -->
-            <li class="reveal" data-tags="systems backend">
-              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
-                  <p class="eyebrow">Write path · durability</p>
-                  <svg class="art h-[7.5rem]" viewBox="0 0 400 150" role="img" aria-label="Clients over TCP reach poll-based event loops, which read and write a hash map guarded by a shared mutex and append every mutation to a write-ahead log on disk">
-                    <g class="rl-box" fill="none" stroke="#5eead4" stroke-opacity="0.3">
-                      <rect x="12" y="52" width="66" height="34" rx="7"/>
-                      <rect x="110" y="52" width="82" height="34" rx="7"/>
-                      <rect x="224" y="18" width="76" height="34" rx="7"/>
-                      <rect x="224" y="88" width="76" height="34" rx="7"/>
-                      <rect x="332" y="88" width="56" height="34" rx="7"/>
-                    </g>
-                    <g stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.4" fill="none" stroke-linecap="round">
-                      <path d="M78 69h28"/><path d="M192 69h10l12-30h8"/><path d="M192 69h10l12 34h8"/><path d="M300 105h28"/>
-                    </g>
-                    <g fill="#5eead4" fill-opacity="0.6">
-                      <path d="M102 65l6 4-6 4z"/><path d="M220 35l6 4-6 4z"/><path d="M220 99l6 4-6 4z"/><path d="M326 101l6 4-6 4z"/>
-                    </g>
-                    <g font-family="ui-monospace,monospace" font-size="9" fill="#94a3b8" text-anchor="middle">
-                      <text x="45" y="66">clients</text><text x="45" y="78" fill="#475569">TCP</text>
-                      <text x="151" y="66">event loops</text><text x="151" y="78" fill="#475569">poll · N thr</text>
-                      <text x="262" y="32">hash map</text><text x="262" y="44" fill="#475569">shared_mutex</text>
-                      <text x="262" y="102">WAL</text><text x="262" y="114" fill="#475569">append only</text>
-                      <text x="360" y="102">disk</text><text x="360" y="114" fill="#475569">fsync</text>
-                    </g>
-                    <text x="12" y="140" font-family="ui-monospace,monospace" font-size="9" fill="#475569">27 tests · crash-recovery replay verified</text>
-                  </svg>
-                </div>
-                <div class="flex flex-1 flex-col p-6">
-                  <div class="flex items-start justify-between gap-3">
-                    <h3 class="font-display text-lg font-semibold text-white">Redis-Lite</h3>
-                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">C++20</span>
-                  </div>
-                  <p class="mt-1 font-mono text-xs text-mint">Durable key-value store</p>
-                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
-                    A non-blocking TCP server speaking a subset of RESP, backed by a hash map under a
-                    readers-writer lock and an append-only write-ahead log. Zero third-party
-                    dependencies — the event loop, the protocol framing, and the durability path are all
-                    hand-written. Ships with a CLI, a Python SDK, a benchmark suite, and a container image.
-                  </p>
-                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Event loop</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">WAL · fsync</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">RESP</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Docker</li>
-                  </ul>
-                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
-                    <span class="font-mono text-xs text-slate-600">Local build · publishing soon</span>
-                  </div>
-                </div>
-              </article>
-            </li>
-
-            <!-- Beacon (system design) -->
-            <li class="reveal" data-tags="backend systems">
-              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
-                  <p class="eyebrow">Measured latency · k6</p>
-                  <svg class="art art-bc h-[7.5rem]" viewBox="0 0 400 160" role="img" aria-label="Bar chart of measured p50, p95 and p99 latency with the access log on versus off, showing the access log costs roughly two to five milliseconds at the tail">
-                    <g transform="translate(12,14)"><rect x="0" y="0" width="9" height="9" rx="2" class="b-on"/><text x="13" y="8" class="b-leg">access log on</text><rect x="0" y="16" width="9" height="9" rx="2" class="b-off"/><text x="13" y="24" class="b-leg">off</text></g>
-<rect x="96" y="107.9" width="26" height="10.1" rx="3" class="b-on"/>
-<rect x="134" y="110.4" width="26" height="7.6" rx="3" class="b-off"/>
-<text x="128.0" y="134" class="b-lab" text-anchor="middle">p50</text>
-<text x="109.0" y="102.9" class="b-v" text-anchor="middle">1.71</text>
-<text x="147.0" y="105.4" class="b-v2" text-anchor="middle">1.29</text>
-<rect x="196" y="71.6" width="26" height="46.4" rx="3" class="b-on"/>
-<rect x="234" y="84.3" width="26" height="33.7" rx="3" class="b-off"/>
-<text x="228.0" y="134" class="b-lab" text-anchor="middle">p95</text>
-<text x="209.0" y="66.6" class="b-v" text-anchor="middle">7.83</text>
-<text x="247.0" y="79.3" class="b-v2" text-anchor="middle">5.70</text>
-<rect x="296" y="38.0" width="26" height="80.0" rx="3" class="b-on"/>
-<rect x="334" y="65.4" width="26" height="52.6" rx="3" class="b-off"/>
-<text x="328.0" y="134" class="b-lab" text-anchor="middle">p99</text>
-<text x="309.0" y="33.0" class="b-v" text-anchor="middle">13.52</text>
-<text x="347.0" y="60.4" class="b-v2" text-anchor="middle">8.89</text>
-<line x1="86" y1="118" x2="384" y2="118" class="b-ax"/>
-<text x="12" y="60" class="b-leg">latency</text><text x="12" y="72" class="b-leg">(ms)</text>
-<text x="86" y="152" class="b-leg">75,358 req/s peak &#183; 0% errors &#183; 200 VUs</text>
-                  </svg>
-                </div>
-                <div class="flex flex-1 flex-col p-6">
-                  <div class="flex items-start justify-between gap-3">
-                    <h3 class="font-display text-lg font-semibold text-white">Beacon</h3>
-                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Go</span>
-                  </div>
-                  <p class="mt-1 font-mono text-xs text-mint">Production-shaped HTTP service</p>
-                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
-                    A system-design exercise taken seriously: typed env config that fails fast and reports
-                    every error at once, structured JSON logs correlated by request ID, split liveness and
-                    readiness probes, and a SIGTERM drain that flips readiness before closing the listener
-                    so the load balancer stops sending work first. Every claim is backed by a k6 run
-                    recorded in a measurements log.
-                  </p>
-                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">stdlib only</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Graceful drain</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Observability</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">k6 · Docker</li>
-                  </ul>
-                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
-                    <span class="font-mono text-xs text-slate-600">Local build · publishing soon</span>
-                  </div>
-                </div>
-              </article>
-            </li>
-
-            <!-- Mini-OS -->
-            <li class="reveal" data-tags="systems">
-              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
-                  <p class="eyebrow">Round-robin trace</p>
-                  <svg class="art art-os h-[7.5rem]" viewBox="0 0 400 150" role="img" aria-label="Gantt chart of three processes preempted in round-robin order, with context switches marked on the timeline and one process blocked on input output">
-                    <line x1="44" y1="39" x2="380" y2="39" class="os-rail"/>
-<text x="14" y="43" class="os-lab">P1</text>
-<line x1="44" y1="67" x2="380" y2="67" class="os-rail"/>
-<text x="14" y="71" class="os-lab">P2</text>
-<line x1="44" y1="95" x2="380" y2="95" class="os-rail"/>
-<text x="14" y="99" class="os-lab">P3</text>
-<rect x="44.0" y="30" width="42.0" height="18" rx="3" class="os-p1"/>
-<rect x="89.0" y="58" width="42.0" height="18" rx="3" class="os-p2"/>
-<rect x="134.0" y="86" width="42.0" height="18" rx="3" class="os-p3"/>
-<rect x="179.0" y="30" width="42.0" height="18" rx="3" class="os-p1"/>
-<rect x="224.0" y="58" width="27.0" height="18" rx="3" class="os-p2"/>
-<rect x="254.0" y="58" width="27.0" height="18" rx="3" class="os-blk"/>
-<rect x="284.0" y="86" width="42.0" height="18" rx="3" class="os-p3"/>
-<rect x="329.0" y="30" width="27.0" height="18" rx="3" class="os-p1"/>
-<path d="M89.0 112 l-3.5 6 h7 z" class="os-sw"/>
-<path d="M134.0 112 l-3.5 6 h7 z" class="os-sw"/>
-<path d="M179.0 112 l-3.5 6 h7 z" class="os-sw"/>
-<path d="M224.0 112 l-3.5 6 h7 z" class="os-sw"/>
-<path d="M284.0 112 l-3.5 6 h7 z" class="os-sw"/>
-<path d="M329.0 112 l-3.5 6 h7 z" class="os-sw"/>
-<line x1="44" y1="112" x2="380" y2="112" class="os-ax"/>
-<g transform="translate(44,130)"><path d="M4 0 l-3.5 6 h7 z" class="os-sw"/><text x="13" y="6" class="os-leg">context switch</text><rect x="96" y="0" width="8" height="7" rx="2" class="os-blk"/><text x="109" y="6" class="os-leg">blocked on I/O</text><text x="196" y="6" class="os-leg">quantum = 3 instr</text></g>
-                  </svg>
-                </div>
-                <div class="flex flex-1 flex-col p-6">
-                  <div class="flex items-start justify-between gap-3">
-                    <h3 class="font-display text-lg font-semibold text-white">Mini-OS</h3>
-                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">C++20</span>
-                  </div>
-                  <p class="mt-1 font-mono text-xs text-mint">Simulated operating system</p>
-                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
-                    A kernel that owns a scheduler, a memory manager, a process table, and a resource
-                    manager, running processes through their full lifecycle — preemption, register
-                    save and restore, page faults, syscalls, blocking and waking. Swapping Round Robin for
-                    FCFS changes one <span class="font-mono">unique_ptr</span> and nothing else. It also
-                    reproduces a real race condition, then catches a deadlock by finding the cycle in its
-                    own wait-for graph.
-                  </p>
-                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Scheduling</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Virtual memory</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Deadlock detection</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">RAII ownership</li>
-                  </ul>
-                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
-                    <span class="font-mono text-xs text-slate-600">Local build · publishing soon</span>
-                  </div>
-                </div>
-              </article>
-            </li>
-
             <!-- BlockSim -->
             <li class="reveal" data-tags="systems">
               <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
@@ -1218,90 +1166,39 @@
               </article>
             </li>
 
-            <!-- SwiftScan -->
-            <li class="reveal" data-tags="systems">
-              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
-                  <p class="eyebrow">Port sweep · 140 sockets</p>
-                  <svg class="art art-pt h-[7.5rem]" viewBox="0 0 400 180" role="img" aria-label="Grid of scanned ports, most closed, a handful open or filtered">
-                    <rect x="16" y="18" width="13" height="13" rx="3" class="pc"/><rect x="35" y="18" width="13" height="13" rx="3" class="pc"/><rect x="54" y="18" width="13" height="13" rx="3" class="pc"/><rect x="73" y="18" width="13" height="13" rx="3" class="pc"/><rect x="92" y="18" width="13" height="13" rx="3" class="pc"/><rect x="111" y="18" width="13" height="13" rx="3" class="pc"/><rect x="130" y="18" width="13" height="13" rx="3" class="pc"/><rect x="149" y="18" width="13" height="13" rx="3" class="pc"/><rect x="168" y="18" width="13" height="13" rx="3" class="pc"/><rect x="187" y="18" width="13" height="13" rx="3" class="pc"/><rect x="206" y="18" width="13" height="13" rx="3" class="pc"/><rect x="225" y="18" width="13" height="13" rx="3" class="pc"/><rect x="244" y="18" width="13" height="13" rx="3" class="pc"/><rect x="263" y="18" width="13" height="13" rx="3" class="pc"/><rect x="282" y="18" width="13" height="13" rx="3" class="pc"/><rect x="301" y="18" width="13" height="13" rx="3" class="po"/><rect x="320" y="18" width="13" height="13" rx="3" class="pc"/><rect x="339" y="18" width="13" height="13" rx="3" class="pc"/><rect x="358" y="18" width="13" height="13" rx="3" class="po"/><rect x="377" y="18" width="13" height="13" rx="3" class="pc"/><rect x="16" y="40" width="13" height="13" rx="3" class="pc"/><rect x="35" y="40" width="13" height="13" rx="3" class="pc"/><rect x="54" y="40" width="13" height="13" rx="3" class="pc"/><rect x="73" y="40" width="13" height="13" rx="3" class="po"/><rect x="92" y="40" width="13" height="13" rx="3" class="pc"/><rect x="111" y="40" width="13" height="13" rx="3" class="pc"/><rect x="130" y="40" width="13" height="13" rx="3" class="pc"/><rect x="149" y="40" width="13" height="13" rx="3" class="pc"/><rect x="168" y="40" width="13" height="13" rx="3" class="po"/><rect x="187" y="40" width="13" height="13" rx="3" class="pw"/><rect x="206" y="40" width="13" height="13" rx="3" class="pc"/><rect x="225" y="40" width="13" height="13" rx="3" class="pc"/><rect x="244" y="40" width="13" height="13" rx="3" class="pw"/><rect x="263" y="40" width="13" height="13" rx="3" class="po"/><rect x="282" y="40" width="13" height="13" rx="3" class="pc"/><rect x="301" y="40" width="13" height="13" rx="3" class="pc"/><rect x="320" y="40" width="13" height="13" rx="3" class="pw"/><rect x="339" y="40" width="13" height="13" rx="3" class="pc"/><rect x="358" y="40" width="13" height="13" rx="3" class="pc"/><rect x="377" y="40" width="13" height="13" rx="3" class="pc"/><rect x="16" y="62" width="13" height="13" rx="3" class="pc"/><rect x="35" y="62" width="13" height="13" rx="3" class="pc"/><rect x="54" y="62" width="13" height="13" rx="3" class="pc"/><rect x="73" y="62" width="13" height="13" rx="3" class="pc"/><rect x="92" y="62" width="13" height="13" rx="3" class="pc"/><rect x="111" y="62" width="13" height="13" rx="3" class="pc"/><rect x="130" y="62" width="13" height="13" rx="3" class="pc"/><rect x="149" y="62" width="13" height="13" rx="3" class="pc"/><rect x="168" y="62" width="13" height="13" rx="3" class="pc"/><rect x="187" y="62" width="13" height="13" rx="3" class="pw"/><rect x="206" y="62" width="13" height="13" rx="3" class="po"/><rect x="225" y="62" width="13" height="13" rx="3" class="po"/><rect x="244" y="62" width="13" height="13" rx="3" class="po"/><rect x="263" y="62" width="13" height="13" rx="3" class="pc"/><rect x="282" y="62" width="13" height="13" rx="3" class="pc"/><rect x="301" y="62" width="13" height="13" rx="3" class="pc"/><rect x="320" y="62" width="13" height="13" rx="3" class="pc"/><rect x="339" y="62" width="13" height="13" rx="3" class="pc"/><rect x="358" y="62" width="13" height="13" rx="3" class="pc"/><rect x="377" y="62" width="13" height="13" rx="3" class="pc"/><rect x="16" y="84" width="13" height="13" rx="3" class="pc"/><rect x="35" y="84" width="13" height="13" rx="3" class="pw"/><rect x="54" y="84" width="13" height="13" rx="3" class="pc"/><rect x="73" y="84" width="13" height="13" rx="3" class="pc"/><rect x="92" y="84" width="13" height="13" rx="3" class="pc"/><rect x="111" y="84" width="13" height="13" rx="3" class="pc"/><rect x="130" y="84" width="13" height="13" rx="3" class="pw"/><rect x="149" y="84" width="13" height="13" rx="3" class="pc"/><rect x="168" y="84" width="13" height="13" rx="3" class="po"/><rect x="187" y="84" width="13" height="13" rx="3" class="pc"/><rect x="206" y="84" width="13" height="13" rx="3" class="pc"/><rect x="225" y="84" width="13" height="13" rx="3" class="pw"/><rect x="244" y="84" width="13" height="13" rx="3" class="pc"/><rect x="263" y="84" width="13" height="13" rx="3" class="pc"/><rect x="282" y="84" width="13" height="13" rx="3" class="pc"/><rect x="301" y="84" width="13" height="13" rx="3" class="pc"/><rect x="320" y="84" width="13" height="13" rx="3" class="pc"/><rect x="339" y="84" width="13" height="13" rx="3" class="po"/><rect x="358" y="84" width="13" height="13" rx="3" class="pc"/><rect x="377" y="84" width="13" height="13" rx="3" class="pc"/><rect x="16" y="106" width="13" height="13" rx="3" class="pc"/><rect x="35" y="106" width="13" height="13" rx="3" class="pc"/><rect x="54" y="106" width="13" height="13" rx="3" class="pw"/><rect x="73" y="106" width="13" height="13" rx="3" class="pc"/><rect x="92" y="106" width="13" height="13" rx="3" class="pc"/><rect x="111" y="106" width="13" height="13" rx="3" class="pc"/><rect x="130" y="106" width="13" height="13" rx="3" class="pc"/><rect x="149" y="106" width="13" height="13" rx="3" class="pc"/><rect x="168" y="106" width="13" height="13" rx="3" class="pc"/><rect x="187" y="106" width="13" height="13" rx="3" class="pc"/><rect x="206" y="106" width="13" height="13" rx="3" class="pc"/><rect x="225" y="106" width="13" height="13" rx="3" class="pc"/><rect x="244" y="106" width="13" height="13" rx="3" class="pc"/><rect x="263" y="106" width="13" height="13" rx="3" class="pc"/><rect x="282" y="106" width="13" height="13" rx="3" class="pc"/><rect x="301" y="106" width="13" height="13" rx="3" class="po"/><rect x="320" y="106" width="13" height="13" rx="3" class="pc"/><rect x="339" y="106" width="13" height="13" rx="3" class="pc"/><rect x="358" y="106" width="13" height="13" rx="3" class="pc"/><rect x="377" y="106" width="13" height="13" rx="3" class="po"/><rect x="16" y="128" width="13" height="13" rx="3" class="pc"/><rect x="35" y="128" width="13" height="13" rx="3" class="pc"/><rect x="54" y="128" width="13" height="13" rx="3" class="pc"/><rect x="73" y="128" width="13" height="13" rx="3" class="pc"/><rect x="92" y="128" width="13" height="13" rx="3" class="pc"/><rect x="111" y="128" width="13" height="13" rx="3" class="pc"/><rect x="130" y="128" width="13" height="13" rx="3" class="pc"/><rect x="149" y="128" width="13" height="13" rx="3" class="pw"/><rect x="168" y="128" width="13" height="13" rx="3" class="pc"/><rect x="187" y="128" width="13" height="13" rx="3" class="pc"/><rect x="206" y="128" width="13" height="13" rx="3" class="pc"/><rect x="225" y="128" width="13" height="13" rx="3" class="pc"/><rect x="244" y="128" width="13" height="13" rx="3" class="pw"/><rect x="263" y="128" width="13" height="13" rx="3" class="pc"/><rect x="282" y="128" width="13" height="13" rx="3" class="pc"/><rect x="301" y="128" width="13" height="13" rx="3" class="pc"/><rect x="320" y="128" width="13" height="13" rx="3" class="pc"/><rect x="339" y="128" width="13" height="13" rx="3" class="pc"/><rect x="358" y="128" width="13" height="13" rx="3" class="pw"/><rect x="377" y="128" width="13" height="13" rx="3" class="pc"/><rect x="16" y="150" width="13" height="13" rx="3" class="pc"/><rect x="35" y="150" width="13" height="13" rx="3" class="pc"/><rect x="54" y="150" width="13" height="13" rx="3" class="pc"/><rect x="73" y="150" width="13" height="13" rx="3" class="pc"/><rect x="92" y="150" width="13" height="13" rx="3" class="pc"/><rect x="111" y="150" width="13" height="13" rx="3" class="pc"/><rect x="130" y="150" width="13" height="13" rx="3" class="pc"/><rect x="149" y="150" width="13" height="13" rx="3" class="pc"/><rect x="168" y="150" width="13" height="13" rx="3" class="pc"/><rect x="187" y="150" width="13" height="13" rx="3" class="po"/><rect x="206" y="150" width="13" height="13" rx="3" class="pc"/><rect x="225" y="150" width="13" height="13" rx="3" class="pc"/><rect x="244" y="150" width="13" height="13" rx="3" class="pc"/><rect x="263" y="150" width="13" height="13" rx="3" class="pw"/><rect x="282" y="150" width="13" height="13" rx="3" class="pc"/><rect x="301" y="150" width="13" height="13" rx="3" class="pc"/><rect x="320" y="150" width="13" height="13" rx="3" class="pc"/><rect x="339" y="150" width="13" height="13" rx="3" class="pc"/><rect x="358" y="150" width="13" height="13" rx="3" class="pc"/><rect x="377" y="150" width="13" height="13" rx="3" class="pc"/>
-                  </svg>
-                </div>
-                <div class="flex flex-1 flex-col p-6">
-                  <div class="flex items-start justify-between gap-3">
-                    <h3 class="font-display text-lg font-semibold text-white">SwiftScan</h3>
-                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Python</span>
-                  </div>
-                  <p class="mt-1 font-mono text-xs text-mint">Concurrent TCP port scanner</p>
-                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
-                    A thread-pooled scanner with banner grabbing and CSV export. Built to learn where
-                    concurrency actually pays: the work is I/O-bound, so threads win — and the pool size,
-                    not the CPU, sets the ceiling.
-                  </p>
-                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Sockets</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Thread pool</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Networking</li>
-                  </ul>
-                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
-                    <a href="https://github.com/Ikbal-ullah/SwiftScan" target="_blank" rel="noopener noreferrer"
-                       class="text-slate-400 transition hover:text-white">Source <span aria-hidden="true">↗</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-
-            <!-- netrooms -->
-            <li class="reveal" data-tags="systems">
-              <article class="card flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="relative border-b border-line bg-black/25 px-5 pb-2 pt-5">
-                  <p class="eyebrow">Broadcast topology</p>
-                  <svg class="art h-[7.5rem]" viewBox="0 0 400 150" role="img" aria-label="A central server node fan-out to six connected clients across two rooms">
-                    <g stroke="#5eead4" stroke-opacity="0.3" stroke-width="1.2">
-                      <path d="M200 75 L96 34M200 75 L96 75M200 75 L96 116M200 75 L304 34M200 75 L304 75M200 75 L304 116"/>
-                    </g>
-                    <g fill="#8b93ff" fill-opacity="0.85">
-                      <circle cx="96" cy="34" r="6"/><circle cx="96" cy="75" r="6"/><circle cx="96" cy="116" r="6"/>
-                    </g>
-                    <g fill="#fbbf24" fill-opacity="0.85">
-                      <circle cx="304" cy="34" r="6"/><circle cx="304" cy="75" r="6"/><circle cx="304" cy="116" r="6"/>
-                    </g>
-                    <circle cx="200" cy="75" r="17" fill="#5eead4" fill-opacity="0.12" stroke="#5eead4" stroke-opacity="0.5"/>
-                    <circle cx="200" cy="75" r="6" fill="#5eead4"/>
-                    <g font-family="ui-monospace,monospace" font-size="9" fill="#475569">
-                      <text x="52" y="140">#general</text><text x="282" y="140">#lounge</text>
-                      <text x="172" y="112">server</text>
-                    </g>
-                  </svg>
-                </div>
-                <div class="flex flex-1 flex-col p-6">
-                  <div class="flex items-start justify-between gap-3">
-                    <h3 class="font-display text-lg font-semibold text-white">netrooms</h3>
-                    <span class="shrink-0 rounded-md border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Python</span>
-                  </div>
-                  <p class="mt-1 font-mono text-xs text-mint">Multi-room TCP chat server</p>
-                  <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
-                    Nicknames, rooms, slash-commands, and thread-safe broadcast over raw TCP. The real
-                    lesson was shared mutable state: every client list touched by every thread needs a
-                    lock, or the bug only shows up under load.
-                  </p>
-                  <ul class="mt-4 flex flex-wrap gap-1.5" role="list">
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">TCP</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Concurrency</li>
-                    <li class="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] text-slate-500">Protocol design</li>
-                  </ul>
-                  <div class="mt-5 flex items-center gap-4 border-t border-line pt-4 text-sm font-medium">
-                    <a href="https://github.com/Ikbal-ullah/netrooms" target="_blank" rel="noopener noreferrer"
-                       class="text-slate-400 transition hover:text-white">Source <span aria-hidden="true">↗</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
           </ul>
 
           <p class="reveal mt-8 text-center font-mono text-xs text-slate-600" id="empty-state" hidden>
             Nothing in that discipline yet — try another filter.
           </p>
+        </div>
+      </section>
+
+      <!-- ================= COMPETITIVE PROGRAMMING ================= -->
+      <section id="cp" class="border-b border-line py-14" aria-labelledby="cp-heading">
+        <div class="mx-auto max-w-shell px-5 sm:px-8">
+          <div class="reveal card flex flex-col gap-6 rounded-2xl p-7 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+            <div class="max-w-2xl">
+              <p class="eyebrow">Competitive programming</p>
+              <h2 id="cp-heading" class="mt-2.5 font-display text-xl font-semibold text-white sm:text-2xl">
+                I compete on Codeforces as <span class="text-mint">trying212</span>.
+              </h2>
+              <p class="mt-3 leading-relaxed text-slate-400">
+                Contests are where I keep the reflex sharp: read the constraints, pick the data structure,
+                commit before the timer runs out. Most of how I approach an unfamiliar problem started
+                here.
+              </p>
+            </div>
+            <a
+              href="https://codeforces.com/profile/trying212"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex shrink-0 items-center gap-2 self-start rounded-lg border border-line px-5 py-3 font-mono text-sm text-slate-300 transition hover:border-mint/40 hover:text-white lg:self-auto"
+            >
+              View profile
+              <span class="transition-transform group-hover:translate-x-0.5" aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -1367,21 +1264,6 @@
             </div>
           </div>
 
-          <div class="reveal mt-5 card rounded-2xl p-6 sm:p-7">
-            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p class="font-mono text-xs uppercase tracking-wider text-slate-500">Also, always</p>
-                <p class="mt-2 text-slate-300">
-                  Competitive programming — data structures, complexity analysis, and the habit of
-                  committing to a solution before the timer runs out.
-                </p>
-              </div>
-              <a href="https://codeforces.com/" target="_blank" rel="noopener noreferrer"
-                 class="shrink-0 rounded-lg border border-line px-4 py-2.5 font-mono text-xs text-slate-400 transition hover:border-slate-500 hover:text-white">
-                Codeforces <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1457,10 +1339,11 @@
                 <span class="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
               </span>
               <p class="font-mono text-xs text-slate-500">2025</p>
-              <h3 class="mt-1.5 font-display text-lg font-semibold text-white">Networks, threads, and first principles</h3>
+              <h3 class="mt-1.5 font-display text-lg font-semibold text-white">Contests, and the habit they build</h3>
               <p class="mt-2 max-w-2xl text-sm leading-relaxed text-slate-400">
-                SwiftScan and netrooms — raw sockets, thread pools, and the kind of race condition that
-                only appears when you stop being polite to your own server.
+                Regular Codeforces rounds alongside coursework. Rating comes and goes; what stuck was the
+                reflex — read the constraints first, pick the structure, commit. Every project after this
+                one was decomposed the same way.
               </p>
             </li>
 
@@ -1471,8 +1354,8 @@
               <p class="font-mono text-xs text-slate-500">Ongoing</p>
               <h3 class="mt-1.5 font-display text-lg font-semibold text-white">B.Tech, Electrical Engineering · NIT Silchar</h3>
               <p class="mt-2 max-w-2xl text-sm leading-relaxed text-slate-400">
-                Third year. Signals, systems, and control theory by day — machine learning and compilers
-                by night. The overlap is larger than the syllabus admits.
+                Fourth and final year. Signals, systems, and control theory by day — machine learning,
+                compilers, and kernels by night. The overlap is larger than the syllabus admits.
               </p>
             </li>
             </ol>
@@ -1905,8 +1788,8 @@
           { label: "BlockSim", hint: "project · C++17 engine", href: "#work" },
           { label: "ML Trading Predictor", hint: "project · live demo", href: "https://ml-trading-predictor-3t3tezcf82fxrxwzwmjwua.streamlit.app/", ext: true },
           { label: "AlgoMentor AI", hint: "project · live demo", href: "https://algomentorai-6txpp8nsuueiljnx9kdkpr.streamlit.app/", ext: true },
-          { label: "SwiftScan", hint: "project · source", href: "https://github.com/Ikbal-ullah/SwiftScan", ext: true },
-          { label: "netrooms", hint: "project · source", href: "https://github.com/Ikbal-ullah/netrooms", ext: true },
+          { label: "Competitive programming", hint: "section", href: "#cp" },
+          { label: "Codeforces · trying212", hint: "profile", href: "https://codeforces.com/profile/trying212", ext: true },
           { label: "Email me", hint: "ikbalullah305@gmail.com", href: "mailto:ikbalullah305@gmail.com", ext: true },
           { label: "GitHub", hint: "profile", href: "https://github.com/Ikbal-ullah", ext: true },
           { label: "LinkedIn", hint: "profile", href: "https://www.linkedin.com/in/mdikbalmashihullah/", ext: true },
